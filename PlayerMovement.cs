@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Run();
+        Run(); //Unity에서 제공하는 Input System 사용
         FlipSprite();
     }
 
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
-    void FlipSprite()
+    void FlipSprite() //왼쪽오른쪽 바라보게 만들기
     {
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
         if(playerHasHorizontalSpeed)
@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
         myRigidbody.velocity = PlayerVelocity;
         bool playerHasSpeed = Mathf.Abs(myRigidbody.velocity.x+myRigidbody.velocity.y) > Mathf.Epsilon;
 
-        myAnimator.SetBool("Running", playerHasSpeed);
+        myAnimator.SetBool("Running", playerHasSpeed); //뛰는 모션을 bool값으로 설정
     }
 
 
