@@ -16,7 +16,7 @@ public class JewelInteraction : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other) 
+    void OnTriggerEnter2D(Collider2D other) //플레이어가 보석을 먹으면은 경험치 증가
     {
         if(other.tag == "Player")
         {
