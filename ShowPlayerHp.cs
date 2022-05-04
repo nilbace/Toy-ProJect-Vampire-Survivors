@@ -1,3 +1,5 @@
+//플레이어 HP표시 슬라이더 사용
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
