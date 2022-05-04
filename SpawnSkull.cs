@@ -1,3 +1,5 @@
+//플레이어 주위에 적을 스폰시키는 스크립트
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
