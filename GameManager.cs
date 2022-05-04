@@ -1,3 +1,5 @@
+//경험치와 레벨업시 무기 선택지에 관련된 스크립트
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,10 +28,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        EXP.value = expPoint/100f;
-        if(EXP.value == 1 && SelectOnce)
+        EXP.value = expPoint/100f;  //경험치바 업데이트
+        if(EXP.value == 1 && SelectOnce) //이 밑으로는 인덱스 번호 > #define AXE 1 같은 느낌으로 무기마다 정수값을 받아서 표현
         {
-            SelectOnce = false;
+            SelectOnce = false;  
             Time.timeScale = 0f;
             levelUP.SetActive(true);
             SetButton();
