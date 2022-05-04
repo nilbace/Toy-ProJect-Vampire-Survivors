@@ -1,3 +1,5 @@
+//플레이어에 붙어있는 스크립트로 무기를 전반적으로 관리함
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,7 +25,7 @@ public class ThrowWeapon : MonoBehaviour
         StartCoroutine(ThrowSPEAR());
     }
 
-    IEnumerator ThrowAXE( )
+    IEnumerator ThrowAXE( )//무기를 Level번만큼 던지고 쿨타임만큼 기다리는 Coroutine 
     {
         while(AxeLevel > 0)
         {
